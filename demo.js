@@ -1,23 +1,11 @@
-function nestedConditionals() {
+function whileDemo(input){
 
-    let pass = "Vlado1312"
+    let index = 0
+    let word = input[index]
 
-    switch (pass) {
-
-
-        case "Hi123": console.log("Hi user!");
-         break
-        case "PBJS2021": console.log("Js is the best!"); 
-        break
-        case "Vlado1312": console.log("Cool!");
-         break
-        case "wiund": console.log("Ne");
-         break
-        default: console.log("Error");
-         break
-
-
+    while(word !== "Stop"){
+        console.log(word)
+        index++
+        word = input[index]
     }
-
 }
-nestedConditionals()
