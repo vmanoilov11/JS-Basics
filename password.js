@@ -1,14 +1,24 @@
-function pass(input){
-    let pass = (input[0])
-    
-    if (pass === "s3cr3t!P@ssw0rd"){
-        
-        console.log("Welcome")
-    
-    } else if(pass !== "s3cr3t!P@ssw0rd"){
+function password(input){
 
-        console.log("Wrong password!")   
+    let index = 0
+    let username = input[index]
+    index++
+
+    let pass = input[index]
+    index++
+
+    let data= input[index]
+    index++
+
+    let counter = 3
+
+    while(data !== pass){
+        data = input[index]
+        index++
+
     }
+    console.log(`Welcome ${username}!`)
 }
-pass(["s3cr3t!P@ssw0rd"])
-
+password(["Gosho",
+"secret",
+"secret"])
