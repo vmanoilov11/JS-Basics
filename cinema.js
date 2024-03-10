@@ -1,22 +1,35 @@
-function cinema(input) {
+function solve(input){
 
-    let day = input[0]
+    let index = 0
+    let nTabs = Number(input[index++])
+    let salary = Number(input[index++])
 
-    if (day === "Monday") {
-        console.log(12)
-    } else if (day === "Tuesday") {
-        console.log(12)
-    } else if (day === "Wednesday") {
-        console.log(14)
-    } else if (day === "Thursday") {
-        console.log(14)
-    } else if (day === "Friday") {
-        console.log(12)
-    } else if (day === "Saturday") {
-        console.log(16)
-    } else if (day === "Sunday") {
-        console.log(16)
+    for(let i = 0; i < nTabs; i++){
+        let currentTab = input[index]
+        index++
+
+        if(currentTab === "Facebook"){
+            salary -= 150
+        }else if(currentTab === "Instagram"){
+            salary -= 100
+        }else if(currentTab === "Reddit"){
+            salary -=50
+        }else{
+            salary = salary
+        }
     }
 
+    if(salary <= 0){
+        console.log("You have lost your salary." )
+    }else{
+        console.log(salary)
+    }
+
+
 }
-cinema(["Sunday"])
+solve(["3",
+"500",
+"Github.com",
+"Stackoverflow.com",
+"softuni.bg"])
+
